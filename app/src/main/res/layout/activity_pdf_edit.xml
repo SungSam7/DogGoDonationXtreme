@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".activities.PdfEditActivity">
+
+    <!--toolbar-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/shape_toolbar01"
+        android:id="@+id/toolbarRl">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/backBtn"
+            android:src="@drawable/ic_back_black"
+            android:background="@android:color/transparent"
+            android:padding="5dp"
+            android:layout_margin="10dp"/>
+
+        <ImageView
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:id="@+id/iconIv"
+            android:src="@drawable/logo"
+            android:layout_marginTop="40dp"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iconIv"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Edit Info"
+            android:textSize="28sp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"/>
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="225dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--input info title-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/titleTil"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                app:hintEnabled="false">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/titleEt"
+                    android:background="@drawable/shape_edittext01"
+                    android:drawableStart="@drawable/ic_pdf_grey"
+                    android:drawablePadding="10dp"
+                    android:hint="Info Title"
+                    android:inputType="textPersonName|textCapSentences"
+                    android:padding="10dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/grey01"/>
+
+
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <!--Title description-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/descriptionTil"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_below="@id/titleTil"
+                android:layout_marginTop="10dp"
+                app:hintEnabled="false">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/descriptionEt"
+                    android:background="@drawable/shape_edittext01"
+                    android:drawableStart="@drawable/ic_pdf_grey"
+                    android:drawablePadding="10dp"
+                    android:hint="Info Description"
+                    android:textSize="16sp"
+                    android:inputType="textMultiLine|textCapSentences"
+                    android:padding="10dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/grey01"/>
+
+
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- pick info category -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/categoryTv"
+                android:layout_below="@id/descriptionTil"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/shape_edittext01"
+                android:drawableStart="@drawable/ic_category_grey"
+                android:drawableEnd="@drawable/ic_down_grey"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:hint="Info Category"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/grey01"
+                android:textSize="16sp"/>
+
+            <!-- Button update info-->
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/submitBtn"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginTop="15dp"
+                android:text="Update"
+                android:background="@drawable/shape_button01"
+                android:layout_below="@id/categoryTv"
+                android:textColor="@color/white"/>
+
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>

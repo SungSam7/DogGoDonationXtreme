@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".activities.PdfListActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:id="@+id/toolbarRl"
+        android:background="@drawable/shape_toolbar02">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/backBtn"
+            android:src="@drawable/ic_back_white"
+            android:background="@android:color/transparent"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:padding="5dp"/>
+
+        <!--Title-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/titleTv"
+            android:text="Info"
+            android:textColor="@color/white"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:textStyle="bold"/>
+
+        <!--subtitle-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/subTitleTv"
+            android:textColor="@color/white"
+            android:layout_centerHorizontal="true"
+            android:text="Category"
+            android:layout_below="@id/titleTv"/>
+
+    </RelativeLayout>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/searchEt"
+        android:layout_below="@id/toolbarRl"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@color/white"
+        android:drawableStart="@drawable/ic_search_grey"
+        android:drawablePadding="10dp"
+        android:padding="10dp"
+        android:hint="Search"
+        android:textColorHint="@color/grey01"
+        android:textColor="@color/black"/>
+
+    <!--Pdf/info list-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/infoRv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/searchEt"
+        android:layout_margin="10dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/row_pdf" />
+
+</RelativeLayout>

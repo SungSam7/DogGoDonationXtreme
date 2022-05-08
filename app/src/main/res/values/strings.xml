@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">DogGo!</string>
+    <string name="title_activity_google_maps">GoogleMapsActivity</string>
+    <string name="city_name">City Name</string>
+    <string name="latitude_longitude">latitude, longitude</string>
+    <string name="weather">weather</string>
+    <string name="temp">temp</string>
+
+</resources>
